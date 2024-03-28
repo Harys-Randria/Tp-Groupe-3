@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class UtilisateurController {
     @GetMapping
-    public String utilisateur(Model model) {
+    String utilisateur(Model model) {
         return "utilisateur";
     }
 }
