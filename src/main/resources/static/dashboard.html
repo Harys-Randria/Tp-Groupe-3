@@ -2,9 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Tâches</title>
+    <!-- Ajout de Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Ajoutez des styles personnalisés ici si nécessaire */
+    </style>
 </head>
 <body>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Gestion de Tâches</h1>
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <input type="checkbox" aria-label="Checkbox for task 1">
+                    <span>Description de la tâche 1</span>
+                    <div>
+                        <button type="button" class="btn btn-sm btn-primary mr-2">Modifier</button>
+                        <button type="button" class="btn btn-sm btn-danger">Supprimer</button>
+                    </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <input type="checkbox" aria-label="Checkbox for task 2">
+                    <span>Description de la tâche 2</span>
+                    <div>
+                        <button type="button" class="btn btn-sm btn-primary mr-2">Modifier</button>
+                        <button type="button" class="btn btn-sm btn-danger">Supprimer</button>
+                    </div>
+                </li>
 
+            </ul>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Ajouter une nouvelle tâche">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">Ajouter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
