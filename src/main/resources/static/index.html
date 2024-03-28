@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription (Registration)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha512-BsbhNIlewchTzuk4ErDlbqYo8lcbQvWqwyWv6UXaGJMHUpccLNvEL4XYOhMyqFjO7zQPH3uLJzUe9vNmA0TqIw==" crossorigin="anonymous">
+    <style>
+        /* Add any specific styling for the form or other elements */
+    </style>
+</head>
+<body>
+<div class="container">  <h1>Inscription (Registration)</h1>  <form action="index.html" method="post">
+    <div class="form-floating mb-3">
+        <input name="username" type="text" class="form-control" id="floatingInput" placeholder="Username" required>
+        <label for="floatingInput">Username</label>
+    </div>
+    <div class="form-floating">
+        <input name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+        <label for="floatingPassword">Password</label>
+    </div>
+    <div class="d-grid gap-2 mt-3">
+        <button type="submit" class="btn btn-primary">S'inscrire (Register)</button>
+    </div>
+</form>
+</div>
+</body>
+</html>
