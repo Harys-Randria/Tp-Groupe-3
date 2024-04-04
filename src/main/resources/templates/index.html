@@ -8,17 +8,17 @@
     <title>Todo</title>
 </head>
 <body>
-<form class="position-absolute start-0 top-0 end-0 bottom-0 d-flex justify-content-center align-items-center">
+<form class="position-absolute start-0 top-0 end-0 bottom-0 d-flex justify-content-center align-items-center" th:action="@{/login}" method="post">
     <div class="d-flex flex-column gap-3 w-25">
         <h4 class="text-center">WELCOME</h4>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Username</label>
-            <input class="form-control" id="Username">
+            <input name="username" class="form-control" id="Username">
 
         </div>
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="InputPassword1">
+            <input name="password" type="password" class="form-control" id="InputPassword1">
         </div>
 
         <button type="submit" class="btn btn-primary">SIGN IN</button>

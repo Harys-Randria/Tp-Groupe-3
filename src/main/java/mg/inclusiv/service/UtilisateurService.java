@@ -12,6 +12,7 @@ public class UtilisateurService {
     @Autowired
     UtilisateurRepository utilisateurRepository;
     public Utilisateur addUtilisateur (Utilisateur utilisateur){
-      return utilisateurRepository.save(utilisateur);
+
+        return utilisateurRepository.save(utilisateur);
     }
 }
