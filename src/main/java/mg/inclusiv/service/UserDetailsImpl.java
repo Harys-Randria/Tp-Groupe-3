@@ -12,6 +12,8 @@ public class UserDetailsImpl implements UserDetails {
     private Utilisateur user;
 
 
+
+
     public static UserDetailsImpl build(Utilisateur user) {
 
         UserDetailsImpl userDetails = new UserDetailsImpl();
@@ -33,6 +35,10 @@ public class UserDetailsImpl implements UserDetails {
     public String getPassword() {
 
         return this.user.getPassword();
+    }
+
+    public Utilisateur getUser() {
+        return this.user;
     }
 
     @Override

@@ -14,7 +14,6 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
-@EnableWebSecurity
 public class SecurityConfig{
 
     @Autowired
@@ -32,19 +31,19 @@ public class SecurityConfig{
     public SecurityFilterChain configure(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests((requests) -> requests
-                        .requestMatchers("/", "/home").permitAll()
+                        .requestMatchers("/utilisateur/save").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin((form) -> form
                         .loginPage("/login")
+                        .failureUrl("/login-error.html")
                         .permitAll()
                 )
-                .logout((logout) -> logout.permitAll());
+                .logout(httpSecurityLogoutConfigurer -> httpSecurityLogoutConfigurer.permitAll()
+                        .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+                        .logoutSuccessUrl("/login"));
 
         return http.build();
     }
-
-
-
 }
 
